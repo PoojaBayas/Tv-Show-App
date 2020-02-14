@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TvShowComponent } from './tv-show/tv-show.component';
+import{ TvShowService} from './tv-show.service';
+
+
+import{HttpClientModule} from'@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +14,10 @@ import { TvShowComponent } from './tv-show/tv-show.component';
     TvShowComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TvShowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

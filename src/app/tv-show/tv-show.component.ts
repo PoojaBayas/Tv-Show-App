@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ITvShowApp } from '../itv-show-app';
+import {TvShowService} from '../tv-show.service';
 
 @Component({
   selector: 'app-tv-show',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tv-show.component.css']
 })
 export class TvShowComponent implements OnInit {
+ current :ITvShowApp
+  constructor(private tvShowService :TvShowService) {
+    
+    } 
+   
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void{
+   this.tvShowService.getTvShow('Girls').subscribe(data =>this.current=data)
   }
 
 }
