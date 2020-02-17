@@ -8,14 +8,17 @@ import {TvShowService} from '../tv-show.service';
   styleUrls: ['./tv-show.component.css']
 })
 export class TvShowComponent implements OnInit {
- current :ITvShowApp
-  constructor(private tvShowService :TvShowService) {
+ current :ITvShowApp[]
+ 
+ constructor(private tvShowService :TvShowService) {
     
     } 
    
 
   ngOnInit(): void{
-   this.tvShowService.getTvShow('Girls').subscribe(data =>this.current=data)
+   
+   this.tvShowService.getTvShow(1).subscribe(data =>this.current=data)
   }
-
 }
+
+

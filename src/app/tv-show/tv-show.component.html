@@ -1,15 +1,29 @@
-<div >
+<!-- <div >
   <div>
     <div>
       <img [src]='current?.image' />
     </div>
-    <span>{{current?.name}}, {{current?.rating}}</span>
+    <span style="font-size: 30px;font-weight: bolder;">{{current?.name}} </span>
     <br/>
     <br/>
-    <span>{{current?.genres}} | {{current?.language}}</span>
+     <span>{{current?.genres}} | {{current?.language}}| {{current?.rating}}</span> 
     <br/>
     <p>{{current?.summary}}</p>
     <br/>
   </div>
  
+</div> -->
+
+<div>
+  <table *ngIf="current">
+    <tr>
+      <th>ID</th>
+          <th>Name :</th>
+              <th>Summary</th>
+  </tr>
+  <tr *ngFor="let b of current">
+    <td>{{b.id}}</td>
+        <td>{{b.name}}</td>
+            <td>{{b.summary}}</td>
+</tr></table>
 </div>
