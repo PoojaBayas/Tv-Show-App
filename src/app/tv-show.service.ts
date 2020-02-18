@@ -25,7 +25,7 @@ export class TvShowService {
   private transformToItvshow(data: ITvShowData[]) : ITvShowApp[]{
     var show;
     var  array:ITvShowApp[]=[];
-    for(show=0;show<10; show++){
+    for(show=0;show<20; show++){
     array[show] = {
 
       id:data[show].id,
