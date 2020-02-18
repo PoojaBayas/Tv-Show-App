@@ -1,29 +1,19 @@
-<!-- <div >
-  <div>
-    <div>
-      <img [src]='current?.image' />
-    </div>
-    <span style="font-size: 30px;font-weight: bolder;">{{current?.name}} </span>
-    <br/>
-    <br/>
-     <span>{{current?.genres}} | {{current?.language}}| {{current?.rating}}</span> 
-    <br/>
-    <p>{{current?.summary}}</p>
-    <br/>
-  </div>
- 
-</div> -->
 
-<div>
-  <table *ngIf="current">
-    <tr>
-      <th>ID</th>
-          <th>Name :</th>
-              <th>Summary</th>
-  </tr>
-  <tr *ngFor="let b of current">
-    <td>{{b.id}}</td>
-        <td>{{b.name}}</td>
-            <td>{{b.summary}}</td>
-</tr></table>
+<div *ngIf="current" style="height: 100px;">
+  <table *ngFor="let b of current">
+    <div style="border: 1px solid black;">
+      <tr>
+        <th style="float:left;"> <img [src]='b.image'/></th>
+
+      </tr>
+      <tr>
+         <td style="font-size: 20px;font-weight: bolder;">{{b.name}}</td>
+       </tr>
+  
+      <tr>
+        <td style="width: 100px;">{{b.summary}}</td>
+      </tr>
+    </div>
+  
+  </table>
 </div>
