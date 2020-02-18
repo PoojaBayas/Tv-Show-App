@@ -15,6 +15,7 @@ export interface ITvShowData {
     medium: string
   },
   summary: string,
-  url:string
+  url:string,
+  season:number
     
  }

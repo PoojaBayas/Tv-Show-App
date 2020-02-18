@@ -1,5 +1,5 @@
 
-<div *ngIf="current" style="height: 100px;">
+<!-- <div *ngIf="current" style="height: 100px;">
   <table *ngFor="let b of current">
     <div style="border: 1px solid black;">
       <tr>
@@ -16,4 +16,20 @@
     </div>
   
   </table>
+</div> -->
+
+
+<div  *ngIf="current">
+  <div  *ngFor="let b of current" id="rowdiv" class="row">
+      <div class="col-lg-3 col-md-6">
+        <section >
+        <img [src]='b.image'/>
+        <div class="showName"><a [href]='b.url' >{{b.name}}</a></div>
+        <div class="season">Season : {{b.season}}</div>
+        <div style="padding: 10px;"> {{b.summary}}</div>
+       </section>
+      </div>
+  </div>
 </div>
+
+     

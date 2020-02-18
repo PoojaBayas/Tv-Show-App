@@ -35,7 +35,8 @@ export class TvShowService {
       // genres: data.genres,
       summary: this.replace(data[show].summary),
       image: data[show].image.medium,
-      url:data[show].url
+      url:data[show].url,
+      season :data[show].season
       // country: data.network.country.name
     }
   }
