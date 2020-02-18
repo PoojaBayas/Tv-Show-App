@@ -8,5 +8,6 @@ export interface ITvShowApp {
   // country :string,
   image:string,
   summary:string,   
+  url:string
 }
 

@@ -14,6 +14,7 @@ export interface ITvShowData {
   image: {
     medium: string
   },
-  summary: string
+  summary: string,
+  url:string
     
  }
