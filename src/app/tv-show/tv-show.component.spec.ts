@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { TvShowComponent } from './tv-show.component';
+import { TvShowComponent } from "./tv-show.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
-describe('TvShowComponent', () => {
+describe("TvShowComponent", () => {
   let component: TvShowComponent;
   let fixture: ComponentFixture<TvShowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TvShowComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientTestingModule],
+      declarations: [TvShowComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('TvShowComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
