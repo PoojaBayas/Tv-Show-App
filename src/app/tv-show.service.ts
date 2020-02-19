@@ -19,7 +19,7 @@ export class TvShowService {
   Observable<ITvShowApp[]>{
     return this.httpClient.get<ITvShowData[]>(
       `${environment.baseUrl}api.tvmaze.com/shows/${pageNo}/episodes`
-      // `${environment.baseUrl}/api.tvmaze.com/shows/${id}/episodes`
+      
     ).pipe(map(data => this.transformToItvshow(data)));
   }
   private transformToItvshow(data: ITvShowData[]) : ITvShowApp[]{

@@ -1,11 +1,15 @@
 a{
   text-decoration: none;
-  color: black;
+  color: #669999;
 
 }
+a:hover,a:visited{
+  color: #476b6b;
+}
 section {
- /* border: black 1px solid; */
-  margin: 5px;
+ border-radius:25px; 
+ background-color: #d8e6f3;
+  margin: 10px;
   height: 300px;
 }
 .showName {
