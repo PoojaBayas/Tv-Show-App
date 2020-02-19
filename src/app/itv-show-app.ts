@@ -1,14 +1,12 @@
 export interface ITvShowApp {
-  
-  id :number,
-  name : string,
-  // language : string,
-  // genres :string,
-  // rating :number,
-  // country :string,
-  image:string,
-  summary:string,   
+  id:number,
+  name :string,
   url:string,
-  season :number
+  genres:string,
+  rating:number,
+  image:string,
+   summary:string
 }
+
+
 

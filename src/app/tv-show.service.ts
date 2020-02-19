@@ -15,28 +15,29 @@ export class TvShowService {
  {
 
   }
-  getTvShow(pageNo:number): 
+  getTvShow(name:string): 
   Observable<ITvShowApp[]>{
     return this.httpClient.get<ITvShowData[]>(
-      `${environment.baseUrl}api.tvmaze.com/shows/${pageNo}/episodes`
+      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${name}`
       
     ).pipe(map(data => this.transformToItvshow(data)));
   }
   private transformToItvshow(data: ITvShowData[]) : ITvShowApp[]{
-    var show;
+    var i;
     var  array:ITvShowApp[]=[];
-    for(show=0;show<20; show++){
-    array[show] = {
+    for(i=0;i<data.length; i++){
+      // console.log(JSON.stringify(data[i]));
+    array[i] = {
 
-      id:data[show].id,
-      name: data[show].name,
+      id:data[i].show.id,
+       name: data[i].show.name,
       // language: data.language,
-      // rating: data.rating.average,
-      // genres: data.genres,
-      summary: this.replace(data[show].summary),
-      image: data[show].image.medium,
-      url:data[show].url,
-      season :data[show].season
+      rating:data[i].show.rating.average,
+       genres: data[i].show.genres,
+      summary: this.replace(data[i].show.summary),
+       image:data[i].show.image.medium,
+      url:data[i].show.url
+      
       // country: data.network.country.name
     }
   }
@@ -48,6 +49,7 @@ export class TvShowService {
     div.innerHTML = html;
     return( div.textContent || div.innerText || "");
   }
+  
 }
  
 

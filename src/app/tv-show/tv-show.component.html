@@ -19,16 +19,15 @@
 </div> -->
 
 
-<div  *ngIf="current">
-  <div  *ngFor="let b of current" id="rowdiv" class="row">
-      <div class="col-lg-3 col-md-6">
-        <section >
-          <div style="padding-top: 10px;"> <a [href]='b.url' ><img [src]='b.image'/></a></div>
-        <div class="showName"><a [href]='b.url' >{{b.name}}</a></div>
-        <div class="season">Season : {{b.season}}</div>
-        <div style="padding: 10px;"> {{b.summary}}</div>
-       </section>
-      </div>
+<div  *ngIf="current" class="container">
+  <div class="contents">
+  <span  *ngFor="let b of current" id="rowdiv"  >
+    <div class="section">
+        <a [href]='b.url' ><img [src]='b.image' width="100%"/></a>
+        <div class="showName"><a [href]='b.url' target="_blank">{{b.name}} {{b.rating}}</a></div>
+        <div style="padding: 10px;text-align: left;"> {{b.summary}}</div> 
+    </div> 
+  </span>
   </div>
 </div>
 

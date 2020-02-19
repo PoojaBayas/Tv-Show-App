@@ -1,21 +1,20 @@
+
+
 export interface ITvShowData {
-  id: number,
-  name: string,
-  // language: string,
-  // genres: string,
-  // rating: {
-  // average: number
-  // },
-  // network: {
-  //   country: {
-  //     name: string
-  //   }
-  // },
+  show:showDataModel
+ 
+  
+ }
+ export interface showDataModel{
+  id:number,
+  name :string,
+  url:string,
+  genres:string,
+  rating: {
+    average:number
+    },
   image: {
     medium: string
   },
-  summary: string,
-  url:string,
-  season:number
-    
- }
+  summary:string
+}
