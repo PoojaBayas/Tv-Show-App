@@ -1,20 +1,16 @@
-
-
 export interface ITvShowData {
-  show:showDataModel
- 
-  
- }
- export interface showDataModel{
-  id:number,
-  name :string,
-  url:string,
-  genres:string,
+  show: showDataModel;
+}
+export interface showDataModel {
+  id: number;
+  name: string;
+  url: string;
+  genres: string;
   rating: {
-    average:number
-    },
+    average: number;
+  };
   image: {
-    medium: string
-  },
-  summary:string
+    medium: string;
+  };
+  summary: string;
 }
