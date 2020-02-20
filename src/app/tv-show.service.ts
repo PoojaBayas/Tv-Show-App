@@ -5,11 +5,12 @@ import{ ITvShowApp} from './itv-show-app';
 import { environment } from 'src/environments/environment';
 import { Observable, pipe } from 'rxjs';
 import{ map} from 'rxjs/operators';
+import { ITvShowService } from './itv-show-service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TvShowService {
+export class TvShowService implements ITvShowService {
 
   constructor(private httpClient: HttpClient)
  {
