@@ -4,12 +4,14 @@
       <div class="section">
         <a [href]="b.url"><img [src]="b.image" width="100%"/></a>
         <div class="showName">
-          <a [href]="b.url" target="_blank">{{ b.name }} {{ b.rating }}</a>
+          <a [href]="b.url" target="_blank">{{ b.name }}</a>
         </div>
-        <div style="padding: 10px;text-align: left;">{{ b.summary }}</div>
+        <div class="showName">
+          <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon
+          >{{ b.rating }}
+        </div>
+        <div class="summary">{{ b.summary }}</div>
       </div>
     </span>
   </div>
 </div>
-
-

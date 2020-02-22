@@ -1,20 +1,25 @@
-a{
+a {
   text-decoration: none;
-  color: #669999;
-
+  color: #ffffff;
 }
-a:hover,a:visited{
+a:hover,
+a:visited {
   color: #476b6b;
 }
 .section {
   float: left;
- background-color: #2f2f2f;
+  background-color: #2f2f2f;
   margin: 5px 0px 5px 10px;
   height: 400px;
-  width:200px;
+  width: 200px;
   overflow: hidden;
 }
-
+.summary {
+  padding: 10px;
+  text-align: left;
+  color: white;
+  font-size: small;
+}
 
 /**** scrollbar styling***/
 
@@ -30,7 +35,6 @@ a:hover,a:visited{
   /* height: max-content; */
   color: #a9a9a9;
 }
-
 
 /*
  *  STYLE 1
@@ -55,10 +59,7 @@ a:hover,a:visited{
   background-color: #555;
 }
 
-
 /****/
-
-
 
 .showName {
   padding-left: 5px;
@@ -66,4 +67,3 @@ a:hover,a:visited{
   font-size: 20px;
   font-weight: bolder;
 }
-

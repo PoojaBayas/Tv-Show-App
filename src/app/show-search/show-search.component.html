@@ -1,12 +1,12 @@
 <form>
   <mat-form-field>
-    <mat-icon matPrefix>search</mat-icon>
     <input
       matInput
       placeholder="Enter Show name"
       aria-label="Show Name"
       [formControl]="search"
     />
+    <mat-icon matSuffix>search</mat-icon>
     <mat-error *ngIf="search.invalid">Type 3 or more charactor</mat-error>
   </mat-form-field>
 </form>
