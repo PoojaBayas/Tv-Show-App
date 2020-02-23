@@ -3,8 +3,8 @@
     Tv Shows
   </mat-toolbar>
   <h4>Your Favourite TV shows</h4>
-  <app-show-search></app-show-search>
+  <app-show-search (searchEvent)='doSearch($event)'></app-show-search>
   <mat-card>
-    <app-tv-show></app-tv-show>
+    <app-tv-show [current]='ApiData'></app-tv-show>
   </mat-card>
 </div>
