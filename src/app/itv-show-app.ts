@@ -7,5 +7,5 @@ export interface ITvShowApp {
   image: string;
   summary: string;
   premiered: string;
-  runtime: number;
+  runtime: string;
 }

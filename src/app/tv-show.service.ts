@@ -34,7 +34,7 @@ export class TvShowService implements ITvShowService {
         image: data[i].show.image? data[i].show.image.medium: "",
         url: data[i].show.url,
         premiered:data[i].show.premiered,
-        runtime:data[i].show.runtime/60
+        runtime:this.timeConvert(data[i].show.runtime)
 
         // country: data.network.country.name
       };
@@ -46,4 +46,12 @@ export class TvShowService implements ITvShowService {
     div.innerHTML = html;
     return div.textContent || div.innerText || "";
   }
+  private timeConvert(n:number) {
+    var num = n;
+    var hours = (num / 60);
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    return  rhours + " h " + rminutes + " min";
+    }
 }
