@@ -11,8 +11,8 @@
         <div class="rating1">
           <span>
             {{ show.rating }}
-            <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>,
-            {{ show.runtime }}
+            <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
+            {{ show.runtime }} {{ show.premiered | date: "yyyy" }}
           </span>
         </div>
         <div class="playbutton">
