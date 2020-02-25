@@ -1,14 +1,17 @@
 <div>
-  <mat-toolbar >
-    <link href='https://fonts.googleapis.com/css?family=Londrina Sketch' rel='stylesheet'>
-    <img src="https://img.icons8.com/bubbles/100/000000/tv.png"/>
+  <mat-toolbar>
+    <link
+      href="https://fonts.googleapis.com/css?family=Londrina Sketch"
+      rel="stylesheet"
+    />
+    <img src="https://img.icons8.com/bubbles/100/000000/tv.png" />
     Tv Shows App
-    <span><app-show-search (searchEvent)="doSearch($event)"></app-show-search>
+    <span
+      ><app-show-search (searchEvent)="doSearch($event)"></app-show-search>
     </span>
   </mat-toolbar>
-  
+
   <!-- <app-show-search style="background-color: #009688;"(searchEvent)="doSearch($event)"></app-show-search> -->
-  <mat-card >
-    <app-tv-show  [current]="ApiData"></app-tv-show>
-  </mat-card>
+
+  <app-tv-show [current]="ApiData"></app-tv-show>
 </div>
