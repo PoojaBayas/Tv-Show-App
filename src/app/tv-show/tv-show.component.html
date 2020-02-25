@@ -2,19 +2,25 @@
   <div *ngFor="let b of current; let i = index">
     <div *ngIf="i == 0">
       <div class="detailSection">
-        <a [href]="b.url" target="_blank"><img class="image" [src]="b.image"/></a>
+        <a [href]="b.url" target="_blank"
+          ><img class="image" [src]="b.image"
+        /></a>
         <div class="showName1">
           {{ b.name }}
         </div>
         <div class="rating1">
           <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon
-          >{{ b.rating }} <span> {{ b.premiered }}</span> {{ b.runtime }} h
+          >{{ b.rating }}
+          <span class="date1"> {{ b.premiered | date: "yyyy" }}</span>
+          {{ b.runtime }} h
         </div>
-        <a [href]="b.url" target="_blank">
-          <button class="playbutton">
-            Play<mat-icon [ngStyle]="{ color: 'white' }">play_arrow</mat-icon>
-          </button>
-        </a>
+        <div class="playButtonDiv">
+          <a [href]="b.url" target="_blank">
+            <button class="playButton">
+              Play<mat-icon [ngStyle]="{ color: 'white' }">play_arrow</mat-icon>
+            </button>
+          </a>
+        </div>
         <div class="genres1">This show is : {{ b.genres }}</div>
 
         <div class="summary1">{{ b.summary }}</div>
