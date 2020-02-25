@@ -1,17 +1,42 @@
-<div *ngIf="current" class="container">
-  <div class="contents">
-    <span *ngFor="let b of current" id="rowdiv">
-      <div class="section">
-        <a [href]="b.url"><img [src]="b.image" width="100%"/></a>
-        <div class="showName">
-          <a [href]="b.url" target="_blank">{{ b.name }}</a>
+<div *ngIf="current">
+  <div *ngFor="let b of current; let i = index">
+    <div *ngIf="i == 0">
+      <div class="detailSection">
+        <a [href]="b.url" target="_blank"><img class="image" [src]="b.image"/></a>
+        <div class="showName1">
+          {{ b.name }}
         </div>
-        <div class="showName">
+        <div class="rating1">
           <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon
-          >{{ b.rating }}
+          >{{ b.rating }} <span> {{ b.premiered }}</span> {{ b.runtime }} h
         </div>
-        <div class="summary">{{ b.summary }}</div>
+        <a [href]="b.url" target="_blank">
+          <button class="playbutton">
+            Play<mat-icon [ngStyle]="{ color: 'white' }">play_arrow</mat-icon>
+          </button>
+        </a>
+        <div class="genres1">This show is : {{ b.genres }}</div>
+
+        <div class="summary1">{{ b.summary }}</div>
       </div>
-    </span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="contents">
+      <span *ngFor="let b of current" id="rowdiv">
+        <div class="section">
+          <a [href]="b.url"><img [src]="b.image" width="100%"/></a>
+          <div class="showName">
+            <a [href]="b.url" target="_blank">{{ b.name }}</a>
+          </div>
+          <div class="showName">
+            <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
+            {{ b.rating }}
+          </div>
+          <div class="summary">{{ b.summary }}</div>
+        </div>
+      </span>
+    </div>
   </div>
 </div>

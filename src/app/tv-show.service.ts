@@ -31,10 +31,10 @@ export class TvShowService implements ITvShowService {
         rating: data[i].show.rating.average,
         genres: data[i].show.genres,
         summary: this.replace(data[i].show.summary),
-        image: data[i].show.image
-          ? data[i].show.image.medium
-          : "",
-        url: data[i].show.url
+        image: data[i].show.image? data[i].show.image.medium: "",
+        url: data[i].show.url,
+        premiered:data[i].show.premiered,
+        runtime:data[i].show.runtime/60
 
         // country: data.network.country.name
       };

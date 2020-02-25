@@ -1,8 +1,33 @@
-body {
-  background-color: #ff99ff;
-}
-h1 {
-  background-color: #669999;
+* {
+  box-sizing: border-box;
 }
 
+div {
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 10px;
+}
+.betweenDiv {
+  height: 10px;
+}
+mat-toolbar {
+  height: 100px;
+  font-family: "Londrina Sketch";
+  font-size: 30px;
+  background-color: #141414;
+  color: #ffd740;
+  display: flex;
+  text-transform: uppercase;
+}
 
+mat-card {
+  margin-top: 10px;
+  background-color: #1d2025;
+}
+
+span:first-of-type {
+  flex: 1;
+  text-align: right;
+  font-size: 15px;
+  padding: 40px;
+}

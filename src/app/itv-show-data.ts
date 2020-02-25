@@ -13,4 +13,6 @@ export interface showDataModel {
     medium: string;
   };
   summary: string;
+  premiered: string;
+  runtime: number;
 }

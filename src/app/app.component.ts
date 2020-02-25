@@ -10,7 +10,7 @@ import { TvShowService } from "./tv-show.service";
 export class AppComponent {
   title = "Tv-Show-App";
   ApiData: ITvShowApp[];
-
+  
   constructor(private tvShowService: TvShowService) {}
 
   doSearch(searchValue) {
@@ -18,5 +18,9 @@ export class AppComponent {
     this.tvShowService
       .getTvShow(userInput)
       .subscribe(data => (this.ApiData = data));
+    
+    
   }
+
+ 
 }

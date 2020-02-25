@@ -1,3 +1,11 @@
+/** related list **/
+.showName {
+  padding-left: 5px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -21,13 +29,61 @@ a:visited {
   font-size: small;
 }
 
+/** related list **/
+
+/** First component styling**/
+.detailSection {
+  border: 1px red solid;
+  /* background-color: #00796b; */
+  align-self: center;
+  height: 400px;
+  width: 1200px;
+
+  margin: auto;
+}
+.image {
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 380px;
+  width: 300px;
+  float: left;
+}
+.showName1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-size: 80px;
+  color: white;
+  margin-bottom: 10px;
+}
+.rating1 {
+  text-align: center;
+  font-size: 20px;
+}
+.genres1 {
+  text-align: center;
+  font-size: 20px;
+}
+.summary1 {
+  text-align: center;
+  font-size: 20px;
+}
+.playbutton {
+  text-align: center;
+  background-color:#141414;
+  border: none;
+  font-size: 30px;
+  color: white;
+}
+/**first componentend**/
+
 /**** scrollbar styling***/
 
 .container {
   max-width: 100%;
   overflow-x: auto;
   /* overflow-y: visible; */
-  background-color: whitesmoke;
+  background-color: #1d2025;
 }
 
 .contents {
@@ -60,10 +116,3 @@ a:visited {
 }
 
 /****/
-
-.showName {
-  padding-left: 5px;
-  text-align: left;
-  font-size: 20px;
-  font-weight: bolder;
-}

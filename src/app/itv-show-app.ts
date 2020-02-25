@@ -6,4 +6,6 @@ export interface ITvShowApp {
   rating: number;
   image: string;
   summary: string;
+  premiered: string;
+  runtime: number;
 }
