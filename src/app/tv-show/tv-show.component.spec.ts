@@ -1,6 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { async, ComponentFixture, TestBed, ɵTestingCompiler } from '@angular/core/testing';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 import { TvShowComponent } from './tv-show.component';
+import { TvShowService } from '../tv-show.service';
+import { TvshowfakeService } from '../tvshowfake.service';
+
 
 describe('TvShowComponent', () => {
   let component: TvShowComponent;
@@ -8,7 +11,9 @@ describe('TvShowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TvShowComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ TvShowComponent],
+      providers: [{provide: TvShowService, useClass: TvshowfakeService}]
     })
     .compileComponents();
   }));

@@ -1,11 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TvShowComponent } from './tv-show/tv-show.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [
-        AppComponent
+        AppComponent,
+        TvShowComponent
       ],
     }).compileComponents();
   }));
@@ -22,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Tv-Show-App');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Tv-Show-App app is running!');
-  });
 });

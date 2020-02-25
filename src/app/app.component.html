@@ -1,3 +1,12 @@
-<div>
-  TV-Show APP
-</div>
+<div style="text-align: center;">
+  <mat-toolbar color=#009688>
+    <link href='https://fonts.googleapis.com/css?family=Londrina Sketch' rel='stylesheet'>
+    <img src="https://img.icons8.com/bubbles/100/000000/tv.png">
+    tv show app
+    <span><app-show-search (searchEvent)="doSearch($event)"></app-show-search></span>
+  </mat-toolbar>
+  <mat-card color=#FFD740>
+    <app-tv-show [tvshow] = "tvshow"></app-tv-show>
+  </mat-card>
+  
+  </div>

@@ -1,1 +1,20 @@
-<p>tv-show works!</p>
+<html>
+<body>
+<div *ngIf='tvshow'>
+  <title>Tv-Show-App</title>
+  <div class="row">
+    <div class="column">
+    
+    <div *ngFor="let show of tvshow">
+    <p>{{ show.name }}</p>
+    <div>
+      <img [src]='show.image' />
+    </div>
+  <p>{{ show.genres }} | {{show.language}}</p>
+  <p>{{show.summary}}</p>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>
