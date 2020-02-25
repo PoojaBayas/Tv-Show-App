@@ -9,7 +9,6 @@ import { TvShowService } from './tv-show.service';
 })
 export class AppComponent {
   title = 'Tv-Show-App';
-
   tvshow: ITvShow[];
    
   constructor(private tvshowService: TvShowService){}

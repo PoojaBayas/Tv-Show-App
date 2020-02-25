@@ -27,11 +27,15 @@ export class TvShowService implements Ishow {
       var tvShowArray: ITvShow[] = [];
       for (var i = 0; i < data.length; i++) {
         tvShowArray[i] = {
+          id: data[i].show.id,
           name: data[i].show.name,
+          url: data[i].show.url,
           language: data[i].show.language,
+          runtime: data[i].show.runtime,
           genres: data[i].show.genres,
           summary: this.replace(data[i].show.summary),
-          image: data[i].show.image === null ? '' : data[i].show.image.medium
+          image: data[i].show.image === null ? '' : data[i].show.image.medium,
+          rating: data[i].show.rating.average
         };
       }
 
