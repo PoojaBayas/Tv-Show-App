@@ -16,9 +16,11 @@ import { MatInputModule } from "@angular/material/input";
 
 import { HttpClientModule } from "@angular/common/http";
 import { ShowSearchComponent } from "./show-search/show-search.component";
+import { ShowScheduleComponent } from './show-schedule/show-schedule.component';
+import { PreviousSearchComponent } from './previous-search/previous-search.component';
 
 @NgModule({
-  declarations: [AppComponent, TvShowComponent, ShowSearchComponent],
+  declarations: [AppComponent, TvShowComponent, ShowSearchComponent, ShowScheduleComponent, PreviousSearchComponent],
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,

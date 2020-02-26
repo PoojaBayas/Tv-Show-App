@@ -1,15 +1,13 @@
 <div>
   <mat-toolbar>
-    <link
-      href="https://fonts.googleapis.com/css?family=Londrina Sketch"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Londrina Sketch" rel="stylesheet"/>
     <img src="https://img.icons8.com/bubbles/100/000000/tv.png" />
     Tv Shows App
-    <span
-      ><app-show-search (searchEvent)="doSearch($event)"></app-show-search>
+    <span>
+      <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
     </span>
   </mat-toolbar>
 
   <app-tv-show [current]="ApiData"> </app-tv-show>
+  
 </div>

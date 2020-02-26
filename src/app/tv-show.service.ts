@@ -19,6 +19,11 @@ export class TvShowService implements ITvShowService {
       )
       .pipe(map(data => this.transformToItvshow(data)));
   }
+  getShowSchedule(): Observable<ITvShowApp[]> {
+    return this.httpClient
+      .get<ITvShowData[]>(`${environment.baseUrl}api.tvmaze.com/schedule`)
+      .pipe(map(data => this.transformToItvshow(data)));
+  }
   private transformToItvshow(data: ITvShowData[]): ITvShowApp[] {
     var i;
     var array: ITvShowApp[] = [];
@@ -52,6 +57,6 @@ export class TvShowService implements ITvShowService {
     var rhours = Math.floor(hours);
     var minutes = (hours - rhours) * 60;
     var rminutes = Math.round(minutes);
-    return rhours ? rhours + " h " + rminutes + " min" : rminutes + " min"; 
+    return rhours ? rhours + " h " + rminutes + " min" : rminutes + " min";
   }
 }
