@@ -1,24 +1,26 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ITvShowApp } from '../itv-show-app';
-import {TvShowService} from '../tv-show.service';
+import { Component, OnInit, Input } from "@angular/core";
+import { ITvShowApp } from "../itv-show-app";
+import { TvShowService } from "../tv-show.service";
 
 @Component({
-  selector: 'app-tv-show',
-  templateUrl: './tv-show.component.html',
-  styleUrls: ['./tv-show.component.css']
+  selector: "app-tv-show",
+  templateUrl: "./tv-show.component.html",
+  styleUrls: ["./tv-show.component.css"]
 })
 export class TvShowComponent implements OnInit {
- @Input() current: ITvShowApp[]
- 
- constructor(private tvShowService :TvShowService) {
-    
-    } 
-   
+  @Input() current: ITvShowApp[];
+  
+  ShowName = "";
+  displayThisShow(Showname) {
+    this.ShowName = Showname;
+    console.log("this =" + this.ShowName);
+    console.log("Hello");
+    document.getElementById("Test").style.display = "block";
+  }
 
-  ngOnInit(): void{
-   
-  //  this.tvShowService.getTvShow('girls').subscribe(data =>this.current=data)
+  constructor(private tvShowService: TvShowService) {}
+
+  ngOnInit(): void {
+    //  this.tvShowService.getTvShow('girls').subscribe(data =>this.current=data)
   }
 }
-
-

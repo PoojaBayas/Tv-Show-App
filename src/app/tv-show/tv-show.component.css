@@ -1,4 +1,3 @@
-  
 * {
   box-sizing: border-box;
 }
@@ -7,9 +6,8 @@
 .showName {
   text-align: left;
   font-size: 15px;
-  font-weight: bolder; 
+  font-weight: bolder;
   font-family: fantasy;
-  
 }
 /* .showName2 {
   position: relative;
@@ -20,7 +18,6 @@
 a {
   text-decoration: none;
   color: #ffffff;
-  
 }
 a:hover {
   opacity: 0.3;
@@ -39,19 +36,15 @@ a:visited {
   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
   text-align: left; */
-   
 }
 .img {
   border-radius: 10%;
 }
 
 /** related list **/
-
-/** First component styling**/
 .detailSection {
-  
   /* background-color: #00796b; */
-  
+
   height: 400px;
   width: 1200px;
   margin: auto;
@@ -80,32 +73,32 @@ a:visited {
 .genres1 {
   text-align: left;
   font-size: 15px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   padding: 5px;
   width: 85%;
 }
 .summary1 {
- 
   text-align: left;
   font-size: 15px;
   padding: 10px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   width: 85%;
-  
-
 }
 .playbutton {
   text-align: center;
   background-color: transparent;
-  border: none; 
+  border: none;
   font-size: 20px;
   color: white;
   position: relative;
   float: right;
   font-family: fantasy;
-  
 }
 /**first componentend**/
+
+/** First component styling**/
 
 /**** scrollbar styling***/
 
