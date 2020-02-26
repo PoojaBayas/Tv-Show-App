@@ -44,7 +44,12 @@
       <span *ngFor="let show of current" id="rowdiv">
         <div class="section">
           <!-- <a [href]="show.url"> -->
-          <img [src]="show.image" width="100%" class="img" />
+          <img
+            [src]="show.image"
+            (click)="displayThisShow(this.show.name)"
+            width="100%"
+            class="img"
+          />
           <!-- </a> -->
           <div class="showName">
             <p (click)="displayThisShow(this.show.name)">{{ show.name }}</p>

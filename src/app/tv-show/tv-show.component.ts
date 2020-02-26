@@ -9,12 +9,10 @@ import { TvShowService } from "../tv-show.service";
 })
 export class TvShowComponent implements OnInit {
   @Input() current: ITvShowApp[];
-  
+
   ShowName = "";
   displayThisShow(Showname) {
     this.ShowName = Showname;
-    console.log("this =" + this.ShowName);
-    console.log("Hello");
     document.getElementById("Test").style.display = "block";
   }
 
