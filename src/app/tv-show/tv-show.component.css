@@ -80,13 +80,15 @@ a:visited {
   width: 85%;
 }
 .summary1 {
+ 
   text-align: left;
   font-size: 15px;
   padding: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  width: 85%;
+  /* width: 85%; */
 }
+p { max-width: 250ch; }
 .playbutton {
   text-align: center;
   background-color: transparent;

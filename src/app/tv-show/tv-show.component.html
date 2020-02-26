@@ -1,4 +1,4 @@
-<div *ngIf="current">
+<span *ngIf="current">
   <!-- This is  for show more details -->
   <div *ngFor="let show of current; let i = index">
     <div *ngIf="show.name == ShowName" id="Test">
@@ -32,7 +32,7 @@
           <hr />
         </div>
 
-        <div class="summary1">{{ show.summary }}</div>
+        <p class="summary1">{{ show.summary }}</p>
       </div>
     </div>
   </div>
@@ -72,7 +72,7 @@
           <hr />
         </div>
 
-        <div class="summary1">{{ show.summary }}</div>
+        <p class="summary1">{{ show.summary }}</p>
       </div>
     </div>
   </div>
@@ -102,5 +102,5 @@
       </span>
     </div>
   </div>
-</div>
+</span>
 <!-- End of Listing the related shows -->
