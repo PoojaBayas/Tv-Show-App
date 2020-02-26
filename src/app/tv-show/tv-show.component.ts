@@ -21,5 +21,6 @@ export class TvShowComponent implements OnInit {
 
   ngOnInit(): void {
     //  this.tvShowService.getTvShow('girls').subscribe(data =>this.current=data)
+    
   }
 }

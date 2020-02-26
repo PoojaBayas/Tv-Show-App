@@ -38,10 +38,10 @@
   </div>
 
   <!--  End of show more detail -->
-  -->
+
   <!-- Showing the search results -->
   <div *ngFor="let show of current; let i = index">
-    <div *ngIf="i==0" id="Test"style.display = "block" id ='searchResultId'>
+    <div *ngIf="i == 0" id="Test" style.display="block" id="searchResultId">
       <div class="detailSection">
         <a [href]="show.url" target="_blank"
           ><img class="image" [src]="show.image"
@@ -95,11 +95,12 @@
             <p (click)="displayThisShow(this.show.name)">{{ show.name }}</p>
           </div>
           <!-- <div class="showName">
-            <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
-            {{ show.rating }}
-          </div> -->
+        <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
+        {{ show.rating }}
+      </div> -->
         </div>
       </span>
     </div>
   </div>
 </div>
+<!-- End of Listing the related shows -->
