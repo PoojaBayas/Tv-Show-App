@@ -38,7 +38,7 @@ export class TvShowService implements ITvShowService {
         summary: this.replace(data[i].show.summary),
         image: data[i].show.image
           ? data[i].show.image.medium
-          : "",
+          : "./images/no-image-icon.png",
         url: data[i].show.url,
         premiered: data[i].show.premiered,
         runtime: this.timeConvert(data[i].show.runtime)
@@ -59,6 +59,13 @@ export class TvShowService implements ITvShowService {
     var rhours = Math.floor(hours);
     var minutes = (hours - rhours) * 60;
     var rminutes = Math.round(minutes);
-    return   rhours ? rhours + " h " + rminutes + " min" : rminutes + " min";
+    // return rhours ? rhours + " h " + rminutes + " min" : rminutes + " min";
+    if (rhours && rminutes) {
+      return rhours + " h " + rminutes + " min";
+    } else if (!rhours && rminutes) {
+      return rminutes + " min";
+    } else {
+      return rhours + " h ";
+    }
   }
 }
