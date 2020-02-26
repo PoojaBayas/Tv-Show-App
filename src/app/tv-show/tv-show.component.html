@@ -1,43 +1,83 @@
 <div *ngIf="current">
-  <div *ngIf="current">
-    <div *ngFor="let show of current; let i = index">
-      <div *ngIf="show.name == ShowName" id="Test">
-        <div class="detailSection">
-          <a [href]="show.url" target="_blank"
-            ><img class="image" [src]="show.image"
-          /></a>
-          <div class="showName1">
-            {{ show.name }}
-          </div>
-          <div class="rating1">
-            <span>
-              {{ show.rating }}
-              <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
-              {{ show.runtime }} {{ show.premiered | date: "yyyy" }}
-            </span>
-          </div>
-          <div class="playbutton">
-            <a [href]="show.url" target="_blank">
-              <div>
-                <img
-                  src="https://img.icons8.com/bubbles/100/000000/circled-play.png"
-                />
-              </div>
-              WATCH NOW!
-              <!-- Watch <mat-icon [ngStyle]="{ color: 'white' }">play_arrow</mat-icon> -->
-            </a>
-          </div>
-          <div class="genres1">
-            Genres: {{ show.genres }}
-            <hr />
-          </div>
-
-          <div class="summary1">{{ show.summary }}</div>
+  <!-- This is  for show more details -->
+  <div *ngFor="let show of current; let i = index">
+    <div *ngIf="show.name == ShowName" id="Test">
+      <div class="detailSection">
+        <a [href]="show.url" target="_blank"
+          ><img class="image" [src]="show.image"
+        /></a>
+        <div class="showName1">
+          {{ show.name }}
         </div>
+        <div class="rating1">
+          <span>
+            {{ show.rating }}
+            <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
+            {{ show.runtime }} {{ show.premiered | date: "yyyy" }}
+          </span>
+        </div>
+        <div class="playbutton">
+          <a [href]="show.url" target="_blank">
+            <div>
+              <img
+                src="https://img.icons8.com/bubbles/100/000000/circled-play.png"
+              />
+            </div>
+            WATCH NOW!
+            <!-- Watch <mat-icon [ngStyle]="{ color: 'white' }">play_arrow</mat-icon> -->
+          </a>
+        </div>
+        <div class="genres1">
+          Genres: {{ show.genres }}
+          <hr />
+        </div>
+
+        <div class="summary1">{{ show.summary }}</div>
       </div>
     </div>
   </div>
 
+  <!--  End of show more detail -->
+  -->
+  <!-- Showing the search results -->
+  <div *ngFor="let show of current; let i = index">
+    <div *ngIf="i==0" id="Test"style.display = "block" id ='searchResultId'>
+      <div class="detailSection">
+        <a [href]="show.url" target="_blank"
+          ><img class="image" [src]="show.image"
+        /></a>
+        <div class="showName1">
+          {{ show.name }}
+        </div>
+        <div class="rating1">
+          <span>
+            {{ show.rating }}
+            <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
+            {{ show.runtime }} {{ show.premiered | date: "yyyy" }}
+          </span>
+        </div>
+        <div class="playbutton">
+          <a [href]="show.url" target="_blank">
+            <div>
+              <img
+                src="https://img.icons8.com/bubbles/100/000000/circled-play.png"
+              />
+            </div>
+            WATCH NOW!
+            <!-- Watch <mat-icon [ngStyle]="{ color: 'white' }">play_arrow</mat-icon> -->
+          </a>
+        </div>
+        <div class="genres1">
+          Genres: {{ show.genres }}
+          <hr />
+        </div>
+
+        <div class="summary1">{{ show.summary }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End ofShowing the search results -->
   <!-- Listing the related shows -->
   <div class="container">
     <div class="contents">

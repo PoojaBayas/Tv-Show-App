@@ -13,6 +13,7 @@ export class TvShowComponent implements OnInit {
   ShowName = "";
   displayThisShow(Showname) {
     this.ShowName = Showname;
+    document.getElementById("searchResultId").style.display = "none";
     document.getElementById("Test").style.display = "block";
   }
 
