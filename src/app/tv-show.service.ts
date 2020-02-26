@@ -27,7 +27,7 @@ export class TvShowService implements ITvShowService {
   private transformToItvshow(data: ITvShowData[]): ITvShowApp[] {
     var i;
     var array: ITvShowApp[] = [];
-    for (i = 0; i < data.length; i++) {
+    for (i = 0; i < 10; i++) {
       // console.log(JSON.stringify(data[i]));
       array[i] = {
         id: data[i].show.id,
