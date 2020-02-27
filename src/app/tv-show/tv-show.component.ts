@@ -17,6 +17,9 @@ export class TvShowComponent implements OnInit {
     document.getElementById("Test").style.display = "block";
   }
 
+  hideThisShow() {
+    document.getElementById("Test").style.display = "block";
+  }
   constructor(private tvShowService: TvShowService) {}
 
   ngOnInit(): void {
