@@ -8,8 +8,12 @@ a.button {
   text-decoration: none;
   text-transform: uppercase;
   color: #ffd740;
+  position: absolute;
+  bottom: 35px;
+  right: 20px;
 }
 mat-toolbar {
+  position: relative;
   height: 100px;
   background-color: #33726c38;
 }
@@ -22,12 +26,12 @@ mat-toolbar {
 }
 
 span:first-of-type {
-  flex: 1;
+  /* flex: 1; */
   text-align: right;
   font-size: 80%;
   padding: 40px;
   color: #ffd740;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .explore {
   font-family: cursive;
@@ -35,4 +39,9 @@ span:first-of-type {
   /* color: #ffd740; */
   padding: 10px;
   font-size: 1.5vw;
+}
+.searchbar {
+  position: absolute;
+  right: 180px;
+  bottom: 20px;
 }
