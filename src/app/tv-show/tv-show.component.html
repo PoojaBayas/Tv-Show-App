@@ -16,6 +16,7 @@
             {{ show.runtime }} {{ show.premiered | date: "yyyy" }}
           </span>
         </div>
+    
         <div class="playbutton">
           <a [href]="show.url" target="_blank">
             <div>
@@ -30,15 +31,17 @@
           Genres: {{ show.genres }}
           <hr />
         </div>
-        <p class="summary1" style="display:inline-block">
-          {{ show.summary | slice: 0:70
-          }}{{ show.summary.length > 70 ? "..." : "" }}
+        <div class="summary">
+        <p  style="display:inline-block">
+          {{ show.summary | slice: 0:200
+          }}{{ show.summary.length > 200 ? "..." : "" }}
         </p>
         <p style="display:inline-block; size:120px">
-          <a style="font-size: 15px; color:blue" [href]="show.url">
+          <a style="font-size: 15px; color:black" [href]="show.url">
             read more</a
           >
         </p>
+      </div>
       </div>
     </div>
   </div>

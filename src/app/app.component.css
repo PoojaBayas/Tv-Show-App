@@ -1,28 +1,38 @@
 * {
   box-sizing: border-box;
 }
-
-div {
-  text-align: left;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 10px;
+a:visited{
+  color: #ffd740;
+} 
+a.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffd740;
 }
 mat-toolbar {
   height: 100px;
+  background-color: #33726c38;
+  
+}
+.icon{
   font-family: "Londrina Sketch";
   font-size: 30px;
-  background-color: #33726c38;
+  background-color:transparent;
   color: #ffd740;
-  display: flex;
   text-transform: uppercase;
-}
-/* mat-card {
-  background-color:#009688 ;
-} */
+} 
 
 span:first-of-type {
-  flex: 1;
+  flex: 1; 
   text-align: right;
-  font-size: 15px;
+  font-size: 80%;
   padding: 40px;
+  color: #ffd740;
+  text-transform: uppercase;
+}
+.explore{
+  font-family: fantasy;
+  color: #ffd740;
+  padding:10px;
+  font-size: 80%;
 }

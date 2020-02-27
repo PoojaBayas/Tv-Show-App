@@ -1,19 +1,20 @@
 <div>
   <mat-toolbar>
-    <link
-      href="https://fonts.googleapis.com/css?family=Londrina Sketch"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Londrina Sketch"rel="stylesheet"/>
     <img src="https://img.icons8.com/bubbles/100/000000/tv.png" />
-    Tv Shows App  <button><a href="#schedule">Home</a></button>
+    <div class="icon"> Tv Shows App </div>
     <span>
-      
+      <a href="#schedule" class="button"><mat-icon matSuffix>home</mat-icon>Home</a>
       <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
     </span>
+    
   </mat-toolbar>
-
+</div>
+<div class="homepage">
   <app-tv-show [current]="ApiData"> </app-tv-show>
   <app-previous-search [current]="tvShowPre"></app-previous-search>
-  <h1 style="text-align: left">Explore What's Streaming!!!!</h1>
+  <div class="explore"><h1 >Explore What's Streaming</h1></div>
+  <div>
   <app-show-schedule id="schedule"></app-show-schedule>
+  </div>
 </div>
