@@ -1,7 +1,7 @@
 <div *ngIf="current">
   <!-- This is  for show more details -->
   <div *ngFor="let show of current; let i = index">
-    <div *ngIf="show.name == ShowName" id="Test">
+    <div *ngIf="show.name == ShowName && show.premiered==date" id="Test">
       <div class="detailSection">
         <a [href]="show.url" target="_blank"
           ><img class="image" [src]="show.image"
@@ -48,13 +48,13 @@
           <!-- <a [href]="show.url"> -->
           <img
             [src]="show.image"
-            (click)="displayThisShow(this.show.name)"
+            (click)="displayThisShow(this.show.name,this.show.premiered)"
             width="100%"
             class="img"
           />
           <!-- </a> -->
           <div class="showName">
-            <p (click)="displayThisShow(this.show.name)">{{ show.name }}</p>
+            <p (click)="displayThisShow(this.show.name,this.show.premiered)">{{ show.name }}</p>
           </div>
           <!-- <div class="showName">
         <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>

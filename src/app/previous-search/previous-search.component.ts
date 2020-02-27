@@ -9,11 +9,14 @@ import { ITvShowApp } from '../itv-show-app';
 export class PreviousSearchComponent implements OnInit {
   @Input() current: ITvShowApp[];
   ShowName = "";
-  displayThisShow(Showname) {
+  date = "";
+  displayThisShow(Showname,premiered) {
     this.ShowName = Showname;
+    this.date = premiered;
     document.getElementById("searchResultId").style.display = "none";
     document.getElementById("Test").style.display = "block";
   }
+
   constructor() { }
 
   ngOnInit(): void {
