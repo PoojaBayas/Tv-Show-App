@@ -32,15 +32,15 @@
           <hr />
         </div>
         <div class="summary">
-        <p  style="display:inline-block">
-          {{ show.summary | slice: 0:200
-          }}{{ show.summary.length > 200 ? "..." : "" }}
-        </p>
-        <p style="display:inline-block; size:120px">
-          <a style="font-size: 15px; color:black" [href]="show.url">
-            read more</a
-          >
-        </p>
+          <p class="summary1" style="display:inline-block" style="font-size: 1.5vw">
+            {{ show.summary | slice: 0:70
+            }}{{ show.summary.length > 70 ? "..." : "" }}
+          </p>
+          <p style="display:inline-block; size:400px">
+            <a style="font-size: 1.5vw; color:blue" [href]="show.url">
+              read more</a
+            >
+          </p>
       </div>
       </div>
     </div>
@@ -80,12 +80,12 @@
           Genres: {{ show.genres }}
           <hr />
         </div>
-        <p class="summary1" style="display:inline-block">
+        <p class="summary1" style="display:inline-block" style="font-size: 1.5vw">
           {{ show.summary | slice: 0:70
           }}{{ show.summary.length > 70 ? "..." : "" }}
         </p>
-        <p style="display:inline-block; size:120px">
-          <a style="font-size: 15px; color:blue" [href]="show.url">
+        <p style="display:inline-block; size:400px">
+          <a style="font-size: 1.5vw; color:blue" [href]="show.url">
             read more</a
           >
         </p>
