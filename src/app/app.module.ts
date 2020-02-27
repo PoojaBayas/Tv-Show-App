@@ -20,7 +20,8 @@ import { ShowScheduleComponent } from './show-schedule/show-schedule.component';
 import { PreviousSearchComponent } from './previous-search/previous-search.component';
 
 @NgModule({
-  declarations: [AppComponent, TvShowComponent, ShowSearchComponent, ShowScheduleComponent, PreviousSearchComponent],
+  declarations: [AppComponent, TvShowComponent, ShowSearchComponent, ShowScheduleComponent,
+    PreviousSearchComponent, ],
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,

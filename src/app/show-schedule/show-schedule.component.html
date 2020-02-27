@@ -32,7 +32,15 @@
           <hr />
         </div>
 
-        <div class="summary1">{{ show.summary }}</div>
+        <p class="summary1" style="display:inline-block">
+          {{ show.summary | slice: 0:70
+          }}{{ show.summary.length > 70 ? "..." : "" }}
+        </p>
+        <p style="display:inline-block; size:120px">
+          <a style="font-size: 15px; color:blue" [href]="show.url">
+            read more</a
+          >
+        </p>
       </div>
     </div>
   </div>

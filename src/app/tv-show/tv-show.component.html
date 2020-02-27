@@ -1,7 +1,7 @@
 <span *ngIf="current">
   <!-- This is  for show more details -->
   <div *ngFor="let show of current; let i = index">
-    <div *ngIf="show.name == ShowName && show.premiered==date" id="Test">
+    <div *ngIf="show.name == ShowName && show.premiered == date" id="Test">
       <div class="detailSection">
         <a [href]="show.url" target="_blank">
           <img class="image" [src]="show.image" />
@@ -24,15 +24,21 @@
               />
             </div>
             WATCH NOW!
-            <!-- Watch <mat-icon [ngStyle]="{ color: 'white' }">play_arrow</mat-icon> -->
           </a>
         </div>
         <div class="genres1">
           Genres: {{ show.genres }}
           <hr />
         </div>
-
-        <p class="summary1">{{ show.summary }}</p>
+        <p class="summary1" style="display:inline-block">
+          {{ show.summary | slice: 0:70
+          }}{{ show.summary.length > 70 ? "..." : "" }}
+        </p>
+        <p style="display:inline-block; size:120px">
+          <a style="font-size: 15px; color:blue" [href]="show.url">
+            read more</a
+          >
+        </p>
       </div>
     </div>
   </div>
@@ -71,8 +77,15 @@
           Genres: {{ show.genres }}
           <hr />
         </div>
-
-        <p class="summary1">{{ show.summary }}</p>
+        <p class="summary1" style="display:inline-block">
+          {{ show.summary | slice: 0:70
+          }}{{ show.summary.length > 70 ? "..." : "" }}
+        </p>
+        <p style="display:inline-block; size:120px">
+          <a style="font-size: 15px; color:blue" [href]="show.url">
+            read more</a
+          >
+        </p>
       </div>
     </div>
   </div>
@@ -86,18 +99,16 @@
           <!-- <a [href]="show.url"> -->
           <img
             [src]="show.image"
-            (click)="displayThisShow(this.show.name,this.show.premiered)"
+            (click)="displayThisShow(this.show.name, this.show.premiered)"
             width="100%"
             class="img"
           />
           <!-- </a> -->
           <div class="showName">
-            <p (click)="displayThisShow(this.show.name,this.show.premiered)">{{ show.name }}</p>
+            <p (click)="displayThisShow(this.show.name, this.show.premiered)">
+              {{ show.name }}
+            </p>
           </div>
-          <!-- <div class="showName">
-        <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
-        {{ show.rating }}
-      </div> -->
         </div>
       </span>
     </div>

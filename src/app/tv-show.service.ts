@@ -38,7 +38,7 @@ export class TvShowService implements ITvShowService {
         summary: this.replace(data[i].show.summary),
         image: data[i].show.image
           ? data[i].show.image.medium
-          : "./images/no-image-icon.png",
+          : "./assets/images/no-image-icon.png",
         url: data[i].show.url,
         premiered: data[i].show.premiered,
         runtime: this.timeConvert(data[i].show.runtime)
