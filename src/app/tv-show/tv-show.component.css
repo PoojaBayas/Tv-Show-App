@@ -10,11 +10,6 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-/* .showName2 {
-  position: relative;
-  font-size: 10px;
-  color: #ffffff;
-}  */
 
 a {
   text-decoration: none;
@@ -23,46 +18,41 @@ a {
 a:hover {
   opacity: 0.3;
 }
-a:visited {
+/* a:visited {
   color: rgb(247, 231, 231);
-}
+} */
 .section {
   float: left;
-  /* background-color: #2f2f2f; */
-  /* margin: 5px 0px 5px 10px; */
+  margin: 5px 0px 5px 10px;
   padding: 5px;
-  height: 400px;
-  width: 200px;
+  height: auto;
+  width: auto;
   overflow: hidden;
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: white;
-  text-align: left; */
 }
 .img {
   border-radius: 10%;
+  width: auto;
 }
 
 /** related list **/
 .detailSection {
-  /* background-color: #00796b; */
-
   height: 400px;
-  width: 1200px;
+  width: auto;
   margin: auto;
 }
 .image {
   padding: 10px;
   height: 380px;
-  width: 300px;
+  width: auto;
   float: left;
   border-radius: 10%;
 }
 .showName1 {
-  padding: 40px;
+  padding: 20px;
   font-family: fantasy;
   text-align: left;
   font-weight: bolder;
-  font-size: 60px;
+  font-size: 3.3vw;
   color: white;
   margin: 10px;
 }
@@ -79,16 +69,16 @@ a:visited {
   padding: 5px;
   width: 85%;
 }
-.summary1 {
+/* .summary1 {
  
   text-align: left;
   font-size: 15px;
   padding: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  /* width: 85%; */
-}
-p { max-width: 250ch; }
+  width: auto; 
+} */
+/* p { max-width: 250ch; } */
 .playbutton {
   text-align: center;
   background-color: transparent;
@@ -98,6 +88,7 @@ p { max-width: 250ch; }
   position: relative;
   float: right;
   font-family: fantasy;
+  padding: 10px;
 }
 /**first componentend**/
 
@@ -140,11 +131,15 @@ p { max-width: 250ch; }
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #555;
 }
-
-/* Just for testing  */
-.Hello {
-  color: red;
+.summary1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.something {
-  color: blue;
+
+h3 {
+  font-family: cursive;
+  color: black;
+  /* color: #ffd740; */
+  padding: 10px;
+  /* font-size: 3vw; */
 }
