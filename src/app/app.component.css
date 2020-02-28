@@ -35,8 +35,7 @@ span:first-of-type {
 }
 .explore {
   font-family: cursive;
-  color: black;
-  /* color: #ffd740; */
+  color: #ffd740; 
   padding: 10px;
   font-size: 1.5vw;
 }

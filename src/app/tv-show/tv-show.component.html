@@ -107,14 +107,14 @@
     <div class="contents">
       <span *ngFor="let show of current" id="rowdiv">
         <div class="section">
-          <!-- <a [href]="show.url"> -->
+          <a>
           <img
             [src]="show.image"
             (click)="displayThisShow(this.show.name, this.show.premiered)"
             width="100%"
             class="img"
           />
-          <!-- </a> -->
+          </a>
           <div class="showName">
             <p (click)="displayThisShow(this.show.name, this.show.premiered)">
               {{ show.name }}

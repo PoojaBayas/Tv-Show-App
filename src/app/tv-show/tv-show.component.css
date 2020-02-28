@@ -139,7 +139,7 @@ a:hover {
 h3 {
   font-family: cursive;
   color: black;
-  /* color: #ffd740; */
+   color: #ffd740; 
   padding: 10px;
-  /* font-size: 3vw; */
+  font-size: 2vw; 
 }
