@@ -13,7 +13,7 @@
           <span>
             {{ show.rating }}
             <mat-icon [ngStyle]="{ color: 'yellow' }">star</mat-icon>
-            {{ show.runtime }} {{ show.premiered | date: "yyyy" }}
+            {{ show.runtime }} | {{ show.premiered | date: "yyyy" }}
           </span>
         </div>
         <div class="playbutton">
@@ -41,7 +41,11 @@
           }}{{ show.summary.length > 70 ? "..." : "" }}
         </p>
         <p style="display:inline-block; size:400px">
-          <a style="font-size: 1.5vw; color:blue" [href]="show.url" target="_blank">
+          <a
+            style="font-size: 1.5vw; color:blue"
+            [href]="show.url"
+            target="_blank"
+          >
             read more</a
           >
         </p>
@@ -64,7 +68,7 @@
               width="100%"
               class="img"
             />
-            </a>
+          </a>
           <div class="showName">
             <p (click)="displayThisShow(this.show.name, this.show.premiered)">
               {{ show.name }}
